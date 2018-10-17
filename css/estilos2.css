@@ -50,6 +50,33 @@ nav ul li a:active {
   text-decoration: none;
 }
 
+/* Galeria*/
+* {
+  box-sizing: border-box;
+}
+
+#galeria {
+  display: block;
+  background-color: #82c3a6;
+  width: 100%;
+}
+.rows {
+  float: left;
+  margin: auto;
+}
+.imagenes {
+  display: flex;
+  flex-flow: row wrap;
+  float: left;
+  width: 33.33%;
+}
+.rows img {
+  margin: 0.8em;
+  width: 100%;
+  border: solid 1px black;
+}
+
+
 /* Responsive */
 .container {
 	display: -webkit-flex;
@@ -59,7 +86,7 @@ nav ul li a:active {
 }
 
 @media (max-width: 600px) {
-    nav, header {
+    header, nav, .imagenes {
         width: 100%;
         height: auto;
     }
