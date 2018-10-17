@@ -13,17 +13,16 @@ body {
 }
 
 /* Cabecera */
-header {
+#Cabecera {
+  display: block;
   background-color: #5b7989;
   border-radius: 10px 10px 0px 0px;
   width: 100%;
-  height: auto;
 }
 
 /* Titulo */
-header h1 {
+header  h1 {
   float: left;
-  display: flow-root;
   margin: 0.2em;
   text-shadow: 2px 2px #02010a;
   text-align: center;
@@ -52,17 +51,35 @@ ul li a:active {
 }
 
 /* Imagen Central */
-div.block1 {
+#imgCent {
   display: block;
   background-color: #82c3a6;
   width: 100%;
 }
-div.block1 img {
+#imgCent img {
   display: flex;
   margin: auto;
   padding: 1em;
   max-width: 80%;
 }
+
+/* Imagenes Segundarias */
+#imgSeg {
+  display: block;
+  background-color: #d5c75f;
+  width: 100%;
+}
+.conten {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 1em;
+}
+.img {
+  border: solid 2px black;
+  width: 80%;
+}
+
 
 
 .container {
