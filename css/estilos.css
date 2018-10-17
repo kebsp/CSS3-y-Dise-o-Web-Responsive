@@ -122,6 +122,7 @@ nav ul li a:active {
   list-style: square;
 }
 
+/* Responsive */
 
 .container {
 	display: -webkit-flex;
@@ -130,7 +131,7 @@ nav ul li a:active {
 	flex-flow: row wrap;
 }
 @media (max-width: 600px) {
-    header, nav {
+    header, nav, .conten div {
         width: 100%;
         height: auto;
 
