@@ -75,11 +75,27 @@ ul li a:active {
   text-align: center;
   margin: 1em;
 }
-.img {
+.imgL, .imgR {
   border: solid 2px black;
   width: 80%;
 }
 
+/* Efectos de Fotos */
+.imgL, .imgR {
+	transition: transform 1s;
+  cursor: none;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.imgL:hover{
+	-ms-transform: rotate(210deg);
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+.imgR:hover {
+	-ms-transform: translate(20px, -5px);
+    -webkit-transform: translate(20px, -5px);
+    transform: translate(20px, -5px);
+}
 
 
 .container {
