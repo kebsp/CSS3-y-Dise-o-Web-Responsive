@@ -33,20 +33,20 @@ nav {
   float: right;
   margin: 0.2em;
 }
-ul {
+nav ul {
   list-style: none;
   align-items: center;
 }
-ul li {
+nav ul li {
   float: left;
 }
-ul li a {
+nav ul li a {
   display: inline-block;
   padding: 10px;
   color: white;
   letter-spacing: 0.05em;
 }
-ul li a:active {
+nav ul li a:active {
   text-decoration: none;
 }
 
@@ -83,19 +83,35 @@ ul li a:active {
 /* Efectos de Fotos */
 .imgL, .imgR {
 	transition: transform 1s;
-  cursor: none;
+  cursor: pointer;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .imgL:hover{
 	-ms-transform: rotate(210deg);
-    -webkit-transform: rotate(10deg);
-    transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
 }
 .imgR:hover {
 	-ms-transform: translate(20px, -5px);
-    -webkit-transform: translate(20px, -5px);
-    transform: translate(20px, -5px);
+  -webkit-transform: translate(20px, -5px);
+  transform: translate(20px, -5px);
 }
+
+/* Pie de Página]*/
+#piePagina {
+  display: flex;
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+  color: black;
+  float: left;
+}
+#piePagina div {
+  display: block;
+  padding: 0.5em;
+  width: 25%;
+}
+
 
 
 .container {
