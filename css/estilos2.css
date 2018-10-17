@@ -76,6 +76,17 @@ nav ul li a:active {
   border: solid 1px black;
 }
 
+/* Efectos de imagen */
+img.img1 {
+  filter: blur(10px);
+}
+.img3 {
+  filter: sepia(90%);
+}
+.img2, .img4, .img6 {
+  filter: grayscale(100%);
+}
+
 
 /* Responsive */
 .container {
@@ -86,7 +97,7 @@ nav ul li a:active {
 }
 
 @media (max-width: 600px) {
-    header, nav, .imagenes {
+    header h1, nav, .imagenes {
         width: 100%;
         height: auto;
     }
