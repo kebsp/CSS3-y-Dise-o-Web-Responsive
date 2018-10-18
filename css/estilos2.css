@@ -12,6 +12,23 @@ body {
   padding: auto;
 }
 
+div.container {
+  -webkit-animation: animacion 2s
+  animation: animacion 2s;
+}
+
+@-webkit-keyframes animacion {
+  0% {top: 150px;}
+  60% {top: -5px;}
+  100% {top: 0px;}
+}
+
+@keyframes animacion {
+  0% {top: 150px;}
+  60% {top: -5px;}
+  100% {top: 0px;}
+}
+
 /* Cabecera */
 #Cabecera {
   display: block;
@@ -60,20 +77,26 @@ nav ul li a:active {
   background-color: #82c3a6;
   width: 100%;
 }
-.rows {
+.content {
   float: left;
   margin: auto;
 }
-.imagenes {
+.content > div {
   display: flex;
   flex-flow: row wrap;
   float: left;
   width: 33.33%;
 }
-.rows img {
+.content img {
   margin: 0.8em;
   width: 100%;
   border: solid 1px black;
+}
+
+.content:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Efectos de imagen */
@@ -87,9 +110,39 @@ img.img1 {
   filter: grayscale(100%);
 }
 
+/* Pie de Página]*/
+#piePagina {
+  display: block;
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
+}
+#piePagina div.content > div {
+  display: flex;
+  flex-flow: row wrap;
+  float: left;
+  padding: 0 1em 0 2em;
+  width: 25%;
+}
+#piePagina div > h2 {
+  color: black;
+}
+#piePagina div > p {
+  font-size: 0.7em;
+  font-weight: bold;
+  color: black;
+}
+#piePagina .content div ul{
+  list-style: square;
+}
 
-/* Responsive */
 .container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+.content {
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row wrap;
@@ -97,9 +150,8 @@ img.img1 {
 }
 
 @media (max-width: 600px) {
-    header h1, nav, .imagenes {
+    .content div, nav, header, #piePagina{
         width: 100%;
         height: auto;
     }
-    h
 }
