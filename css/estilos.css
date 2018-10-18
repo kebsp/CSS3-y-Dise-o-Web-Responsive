@@ -75,6 +75,7 @@ nav ul li a:active {
   text-align: center;
   margin: 1em;
 }
+
 .imgL, .imgR {
   border: solid 2px black;
   width: 80%;
@@ -131,7 +132,7 @@ nav ul li a:active {
 	flex-flow: row wrap;
 }
 @media (max-width: 600px) {
-    header, nav, .conten div {
+    header, nav, .conten  {
         width: 100%;
         height: auto;
 
