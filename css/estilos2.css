@@ -1,32 +1,28 @@
+*{
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #02010a;
+  font-family: Dancing Script;
+  color: white;
 }
 
 /* Contenido */
 .container {
-  font-family: Dancing Script;
-  color: white;
   position: relative;
   max-width: 900px;
   margin: auto;
   padding: auto;
-}
-
-div.container {
-  -webkit-animation: animacion 2s
-  animation: animacion 2s;
-}
-
-@-webkit-keyframes animacion {
-  0% {top: 150px;}
-  60% {top: -5px;}
-  100% {top: 0px;}
-}
-
-@keyframes animacion {
-  0% {top: 150px;}
-  60% {top: -5px;}
-  100% {top: 0px;}
+  animation: 2s animation;
+  -moz-animation: 2s animation 1;
+  -webkit-animation: 2s animation 1;
+  -ms-animation: 2s animation 1;
 }
 
 /* Cabecera */
@@ -63,15 +59,11 @@ nav ul li a {
   color: white;
   letter-spacing: 0.05em;
 }
-nav ul li a:active {
+.active {
   text-decoration: none;
 }
 
 /* Galeria*/
-* {
-  box-sizing: border-box;
-}
-
 #galeria {
   display: block;
   background-color: #82c3a6;
@@ -81,15 +73,15 @@ nav ul li a:active {
   float: left;
   margin: auto;
 }
-.content > div {
+.content  div {
   display: flex;
   flex-flow: row wrap;
   float: left;
-  width: 33.33%;
+  width: 32%;
 }
 .content img {
-  margin: 0.8em;
-  width: 100%;
+  margin: 1em;
+  width: 90%;
   border: solid 1px black;
 }
 
@@ -110,30 +102,58 @@ img.img1 {
   filter: grayscale(100%);
 }
 
-/* Pie de Página]*/
+/* Pie de Página*/
 #piePagina {
-  display: block;
+  display: flex;
+  flex-flow: column no-wrap;
   background-color: #C6d5c5;
   border-radius: 0 0 10px 10px;
   width: 100%;
-}
-#piePagina div.content > div {
-  display: flex;
-  flex-flow: row wrap;
-  float: left;
-  padding: 0 1em 0 2em;
-  width: 25%;
-}
-#piePagina div > h2 {
+  font-size: 1em;
   color: black;
+}
+#contacto, #terminos, #redesSociales, #derechos {
+  margin: 2em 1em;
+  text-align: left;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+#piePagina div {
+  width: 25%;
 }
 #piePagina div > p {
   font-size: 0.7em;
   font-weight: bold;
   color: black;
 }
-#piePagina .content div ul{
-  list-style: square;
+#piePagina div li {
+  list-style: none;
+}
+#redesSociales img {
+  width: 15%;
+  display: inline-block;
+}
+
+/* Animación */
+@keyframes animacion {
+  0% {transform: translateY(150px);}
+  60% {transform: translateY(-5px);}
+  100% {transform: translateY(50px);}
+}
+@-moz-keyframes animacion {
+  0% {margin-top: 150px;}
+  60% {margin-top: -5px;}
+  100% {margin-top: 0px;}
+}
+@-webkit-keyframes animacion {
+  0% {margin-top: 150px;}
+  60% {margin-top: -5px;}
+  100% {margin-top: 0px;}
+}
+@-ms-keyframes animacion {
+  0% {margin-top: 150px;}
+  60% {margin-top: -5px;}
+  100% {margin-top: 0px;}
 }
 
 .container {
@@ -142,16 +162,42 @@ img.img1 {
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
 }
-.content {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-}
 
 @media (max-width: 600px) {
-    .content div, nav, header, #piePagina{
+    .content div, nav, header {
         width: 100%;
         height: auto;
+    }
+    /* Pie de Página*/
+    #piePagina {
+      display: flex;
+      flex-direction: column;
+      background-color: #C6d5c5;
+      border-radius: 0 0 10px 10px;
+      width: 100%;
+      font-size: 1em;
+      color: black;
+    }
+    #contacto, #terminos, #redesSociales, #derechos {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      padding-left: 1em;
+      padding-bottom: 1em;
+    }
+    #piePagina div {
+      width: 100%;
+    }
+    #piePagina div > p {
+      font-size: 0.7em;
+      font-weight: bold;
+      color: black;
+    }
+    #piePagina div li {
+      list-style: none;
+    }
+    #redesSociales img {
+      width: 5%;
+      display: inline-block;
     }
 }
